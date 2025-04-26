@@ -35,7 +35,7 @@
         }
         .input-fields, .buttons, .task-field {
             text-align: center;
-            margin-top: 80px; /* header-textと重ならないように余白を追加 */
+            margin-top: 40px; /* header-textと重ならないように調整 */
         }
         .input-fields {
             display: flex;
@@ -51,7 +51,7 @@
         .input-fields input {
             padding: 5px;
             font-size: 14px;
-            width: 150px; /* 入力欄を小さく */
+            width: 200px; /* 入力欄を広く */
             margin: 5px 0;
         }
         .task-field textarea {
@@ -77,7 +77,7 @@
                 left: 5px; /* 少し左に配置 */
             }
             .input-fields {
-                margin-top: 120px;  /* スマホで重ならないように調整 */
+                margin-top: 100px;  /* スマホで重ならないように調整 */
             }
             .task-field {
                 margin-top: 20px; /* 他の要素との間隔調整 */
@@ -91,12 +91,10 @@
         2025市川昴倫理（宮西）
     </div>
 
-    <!-- 組・番・氏名を入力するための文と入力欄 -->
+    <!-- 組・番・氏名を1つの入力欄にまとめる -->
     <div class="input-fields">
         <label>【ここに組・番・氏名を入力】</label>
-        <input type="text" id="class" placeholder="組" maxlength="2">
-        <input type="text" id="number" placeholder="番" maxlength="2">
-        <input type="text" id="name" placeholder="氏名" maxlength="10">
+        <input type="text" id="userInfo" placeholder="組・番・氏名をカンマ区切りで入力" maxlength="50">
     </div>
 
     <div class="task-field">
