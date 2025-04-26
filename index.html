@@ -2,12 +2,19 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>レーダーチャート作成アプリ</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
+        body {
+            font-family: sans-serif;
+            margin: 10px;
+            padding: 0;
+        }
         canvas {
-            max-width: 600px;
-            margin: 30px auto;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
             display: block;
         }
         .input-fields, .buttons, .task-field {
@@ -15,12 +22,12 @@
             margin-top: 20px;
         }
         .input-fields input {
-            margin: 0 5px;
-            padding: 5px;
+            margin: 5px;
+            padding: 8px;
             font-size: 16px;
         }
         #class, #number {
-            width: 40px;
+            width: 50px;
         }
         #name {
             width: 150px;
@@ -32,13 +39,15 @@
             margin-top: 10px;
             padding: 10px;
             font-size: 16px;
-            width: 80%;
-            height: 100px;
+            width: 90%;
+            height: 120px;
         }
         .buttons button {
-            margin: 5px;
+            margin: 5px 5px;
             padding: 10px 15px;
             font-size: 16px;
+            width: 40%;
+            max-width: 200px;
         }
     </style>
 </head>
@@ -49,7 +58,7 @@
     </div>
 
     <div class="task-field">
-        <p>【課】作成したキャラクター名を挙げ、その特性を文章で説明しなさい。また、そのキャラクターのビッグ・ファイブを作成しなさい。</p>
+        <p>【課】作成したキャラクターを明確にし、その特性を文章で説明しなさい。また、そのキャラクターのビッグ・ファイブを作成しなさい。</p>
         <textarea id="characterDescription" placeholder="ここに記入してください"></textarea>
     </div>
 
@@ -88,7 +97,9 @@
                     legend: {
                         display: false
                     }
-                }
+                },
+                responsive: true,
+                maintainAspectRatio: false
             }
         });
 
