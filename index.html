@@ -42,20 +42,17 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            flex-direction: column;
         }
-        .input-fields label, .input-fields input {
-            margin: 5px;
-            font-size: 14px;
+        .input-fields label {
+            font-size: 16px;
+            margin: 10px 0;
         }
         .input-fields input {
-            padding: 8px;
+            padding: 5px;
             font-size: 14px;
-        }
-        #class, #number {
-            width: 50px;
-        }
-        #name {
-            width: 160px;
+            width: 150px; /* 入力欄を小さく */
+            margin: 5px 0;
         }
         .task-field textarea {
             margin-top: 10px;
@@ -94,11 +91,12 @@
         2025市川昴倫理（宮西）
     </div>
 
+    <!-- 組・番・氏名を入力するための文と入力欄 -->
     <div class="input-fields">
-        <label>3年</label><input type="text" id="class" maxlength="2">
-        <label>組</label><input type="text" id="number" maxlength="2">
-        <label>番</label>
-        <label>氏名</label><input type="text" id="name" maxlength="10">
+        <label>【ここに組・番・氏名を入力】</label>
+        <input type="text" id="class" placeholder="組" maxlength="2">
+        <input type="text" id="number" placeholder="番" maxlength="2">
+        <input type="text" id="name" placeholder="氏名" maxlength="10">
     </div>
 
     <div class="task-field">
