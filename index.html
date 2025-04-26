@@ -25,6 +25,11 @@
             text-align: center;
             margin-top: 20px;
         }
+        .input-fields label {
+            display: inline-block;
+            margin: 5px;
+            font-size: 18px;
+        }
         .input-fields input {
             margin: 5px;
             padding: 8px;
@@ -34,10 +39,7 @@
             width: 50px;
         }
         #name {
-            width: 150px;
-        }
-        .input-fields span {
-            font-size: 18px;
+            width: 160px;
         }
         .task-field textarea {
             margin-top: 10px;
@@ -57,8 +59,10 @@
 </head>
 <body>
     <div class="input-fields">
-        <span>3年</span><input type="text" id="class" placeholder="" maxlength="2"><span>組</span><input type="text" id="number" placeholder="" maxlength="2"><span>番　</span>
-        <span>氏名</span><input type="text" id="name" placeholder="" maxlength="10">
+        <label>3年</label><input type="text" id="class" maxlength="2">
+        <label>組</label><input type="text" id="number" maxlength="2">
+        <label>番</label>
+        <label>氏名</label><input type="text" id="name" maxlength="10">
     </div>
 
     <div class="task-field">
