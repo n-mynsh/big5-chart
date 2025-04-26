@@ -10,13 +10,15 @@
             font-family: sans-serif;
             margin: 10px;
             padding: 0;
+            position: relative; /* header-textの配置に必要 */
         }
         /* ページの冒頭に小さく表示するテキスト */
         .header-text {
-            font-size: 12px;  /* 文字サイズを調整 */
-            text-align: center;
-            margin-bottom: 20px;
-            color: #555; /* 少し薄い色に変更 */
+            font-size: 10px;  /* 文字サイズを小さく設定 */
+            position: absolute; /* 絶対配置 */
+            top: 10px;  /* 上部に配置 */
+            left: 10px; /* 左端に配置 */
+            color: #555; /* 少し薄い色 */
         }
         .chart-container {
             position: relative;
