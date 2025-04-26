@@ -25,13 +25,17 @@
             text-align: center;
             margin-top: 20px;
         }
-        .input-fields label {
-            display: inline-block;
+        .input-fields {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .input-fields label, .input-fields input {
             margin: 5px;
             font-size: 18px;
         }
         .input-fields input {
-            margin: 5px;
             padding: 8px;
             font-size: 16px;
         }
@@ -66,7 +70,7 @@
     </div>
 
     <div class="task-field">
-        <p>【課】作成したキャラクターを明確にし、その特性を文章で説明しなさい。また、そのキャラクターのビッグ・ファイブを作成しなさい。</p>
+        <p>【課】私でも知っている有名なキャラクターを一名指定し、個性の特徴を文章で説明しなさい。また、そのキャラクターの特性をビッグ・ファイブで表現しなさい。</p>
         <textarea id="characterDescription" placeholder="ここに記入してください"></textarea>
     </div>
 
