@@ -19,7 +19,7 @@
         }
         canvas {
             width: 100% !important;
-            height: auto !important;
+            height: 400px !important; /* 高さを指定 */
         }
         .input-fields, .buttons, .task-field {
             text-align: center;
@@ -33,11 +33,11 @@
         }
         .input-fields label, .input-fields input {
             margin: 5px;
-            font-size: 18px;
+            font-size: 14px;
         }
         .input-fields input {
             padding: 8px;
-            font-size: 16px;
+            font-size: 14px;
         }
         #class, #number {
             width: 50px;
@@ -70,7 +70,7 @@
     </div>
 
     <div class="task-field">
-        <p>【課】私でも知っている有名なキャラクターを一名指定し、個性の特徴を文章で説明しなさい。また、そのキャラクターの特性をビッグ・ファイブで表現しなさい。</p>
+        <p>【課】私にも伝わる有名なキャラクターを１名選び、個性の特徴を文章で説明しなさい。また、そのキャラクターの特性をビッグ・ファイブで表現しなさい。</p>
         <textarea id="characterDescription" placeholder="ここに記入してください"></textarea>
     </div>
 
@@ -82,7 +82,7 @@
 
     <script>
         const labels = ['外向性', '神経症傾向', '開放性', '調和性', '誠実性'];
-        const dataValues = Array(labels.length).fill(0);
+        const dataValues = [3, 3, 3, 3, 3];  // 初期値を設定、各項目に対してデフォルト値3を設定
 
         const ctx = document.getElementById('radarChart').getContext('2d');
         const radarChart = new Chart(ctx, {
