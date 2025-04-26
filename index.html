@@ -11,11 +11,15 @@
             margin: 10px;
             padding: 0;
         }
+        .chart-container {
+            position: relative;
+            width: 90%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
         canvas {
-            max-width: 100%;
-            height: auto;
-            margin: 20px auto;
-            display: block;
+            width: 100% !important;
+            height: auto !important;
         }
         .input-fields, .buttons, .task-field {
             text-align: center;
@@ -62,7 +66,10 @@
         <textarea id="characterDescription" placeholder="ここに記入してください"></textarea>
     </div>
 
-    <canvas id="radarChart"></canvas>
+    <div class="chart-container">
+        <canvas id="radarChart"></canvas>
+    </div>
+
     <div class="buttons" id="buttons"></div>
 
     <script>
@@ -84,6 +91,7 @@
                 }]
             },
             options: {
+                responsive: true,
                 scales: {
                     r: {
                         min: 0,
@@ -97,9 +105,7 @@
                     legend: {
                         display: false
                     }
-                },
-                responsive: true,
-                maintainAspectRatio: false
+                }
             }
         });
 
