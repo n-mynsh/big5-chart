@@ -24,7 +24,7 @@
         }
         .input-fields, .buttons, .task-field {
             text-align: center;
-            margin-top: 40px; /* header-textと重ならないように調整 */
+            margin-top: 0; /* 不要な空白を削除 */
         }
         .input-fields {
             display: flex;
@@ -61,7 +61,7 @@
         /* スマホ表示のためのレスポンシブ調整 */
         @media (max-width: 768px) {
             .input-fields {
-                margin-top: 100px;  /* スマホで重ならないように調整 */
+                margin-top: 40px;  /* スマホで重ならないように調整 */
             }
             .task-field {
                 margin-top: 20px; /* 他の要素との間隔調整 */
@@ -74,7 +74,7 @@
     <!-- 組・番・氏名を1つの入力欄にまとめる -->
     <div class="input-fields">
         <label>【ここに組・番・氏名を入力】</label>
-        <input type="text" id="userInfo" placeholder="組・番・氏名を入力" maxlength="50">
+        <input type="text" id="userInfo" placeholder="組・番・氏名をカンマ区切りで入力" maxlength="50">
     </div>
 
     <div class="task-field">
